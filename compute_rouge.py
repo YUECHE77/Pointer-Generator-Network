@@ -66,8 +66,8 @@ with open(test_path, 'r', encoding='utf-8') as f:
         source = dic[src_name]
         summary = dic[tgt_name]
 
-        pred = greedy_search(source, tokenizer, encoder, decoder, reduce_state, num_steps=128, max_length=512,
-                             hidden_dim=256)
+        pred = greedy_search(source, tokenizer, encoder, decoder, reduce_state, num_steps=128,
+                             max_length=512, hidden_dim=256)
 
         if not pred:
             continue
